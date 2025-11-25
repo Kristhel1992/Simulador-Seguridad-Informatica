@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 2 - Simulador Seguridad Informática</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+}
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2 { text-align: center; }
+
+.pregunta {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.correcto {
+    color: green;
+    font-weight: bold;
+}
+.incorrecto {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    background: #007bff;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background: #005fcc;
+}
+
+#resultado {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h2>Módulo 2 — Seguridad Informática</h2>
+
+<form id="examenForm">
+
+<!-- ================= PREGUNTAS MÓDULO 2 ================= -->
+
+<div class="pregunta">
+<p>25. Un ataque interno suele ser realizado por:</p>
+<label><input type="radio" name="p25" value="1"> Empleados con acceso privilegiado</label><br>
+<label><input type="radio" name="p25" value="0"> Botnets externas</label><br>
+<label><input type="radio" name="p25" value="0"> Spammers</label><br>
+<label><input type="radio" name="p25" value="0"> Hackers anónimos</label>
+</div>
+
+<div class="pregunta">
+<p>26. La gestión de activos es importante porque:</p>
+<label><input type="radio" name="p26" value="1"> Mantiene control sobre hardware, software y datos</label><br>
+<label><input type="radio" name="p26" value="0"> Actualiza antivirus</label><br>
+<label><input type="radio" name="p26" value="0"> Genera llaves criptográficas</label><br>
+<label><input type="radio" name="p26" value="0"> Reduce el jitter</label>
+</div>
+
+<div class="pregunta">
+<p>27. Una amenaza ambiental típica sería:</p>
+<label><input type="radio" name="p27" value="1"> Huracán</label><br>
+<label><input type="radio" name="p27" value="0"> Robo de servidores</label><br>
+<label><input type="radio" name="p27" value="0"> Virus informático</label><br>
+<label><input type="radio" name="p27" value="0"> Pérdida de energía</label>
+</div>
+
+<div class="pregunta">
+<p>28. El proyecto OWASP tiene como finalidad principal:</p>
+<label><input type="radio" name="p28" value="1"> Mejorar la seguridad de aplicaciones web</label><br>
+<label><input type="radio" name="p28" value="0"> Producir malware de prueba</label><br>
+<label><input type="radio" name="p28" value="0"> Vender cortafuegos</label><br>
+<label><input type="radio" name="p28" value="0"> Crear estándares de hardware</label>
+</div>
+
+<div class="pregunta">
+<p>29. Contramedida contra enumeración NetBIOS:</p>
+<label><input type="radio" name="p29" value="1"> Deshabilitar el uso compartido de archivos/impresoras</label><br>
+<label><input type="radio" name="p29" value="0"> Abrir puertos 135-139</label><br>
+<label><input type="radio" name="p29" value="0"> Habilitar Telnet</label><br>
+<label><input type="radio" name="p29" value="0"> Usar SMTP sin TLS</label>
+</div>
+
+<div class="pregunta">
+<p>30. ¿Cuál es una amenaza técnica?</p>
+<label><input type="radio" name="p30" value="1"> Baja tensión eléctrica</label><br>
+<label><input type="radio" name="p30" value="0"> Phishing</label><br>
+<label><input type="radio" name="p30" value="0"> Insider</label><br>
+<label><input type="radio" name="p30" value="0"> Inyección SQL</label>
+</div>
+
+<div class="pregunta">
+<p>31. El ataque watering-hole consiste en:</p>
+<label><input type="radio" name="p31" value="1"> Infectar un sitio legítimo visitado por la víctima</label><br>
+<label><input type="radio" name="p31" value="0"> Phishing SMS</label><br>
+<label><input type="radio" name="p31" value="0"> Shoulder surfing</label><br>
+<label><input type="radio" name="p31" value="0"> Falsificar DNS</label>
+</div>
+
+<div class="pregunta">
+<p>32. El ataque whaling se dirige a:</p>
+<label><input type="radio" name="p32" value="1"> Altos ejecutivos</label><br>
+<label><input type="radio" name="p32" value="0"> Estudiantes</label><br>
+<label><input type="radio" name="p32" value="0"> Servidores DNS</label><br>
+<label><input type="radio" name="p32" value="0"> Soporte técnico</label>
+</div>
+
+<div class="pregunta">
+<p>33. Nikto2 se centra en analizar:</p>
+<label><input type="radio" name="p33" value="1"> Aplicaciones web y servidores HTTP</label><br>
+<label><input type="radio" name="p33" value="0"> Redes SCADA</label><br>
+<label><input type="radio" name="p33" value="0"> Firmware IoT</label><br>
+<label><input type="radio" name="p33" value="0"> Bases de datos</label>
+</div>
+
+<div class="pregunta">
+<p>34. SNMP se transporta sobre:</p>
+<label><input type="radio" name="p34" value="1"> UDP</label><br>
+<label><input type="radio" name="p34" value="0"> TCP puerto 80</label><br>
+<label><input type="radio" name="p34" value="0"> ICMP</label><br>
+<label><input type="radio" name="p34" value="0"> SCTP</label>
+</div>
+
+<div class="pregunta">
+<p>35. El operador <b>eq</b> en una regla firewall sirve para:</p>
+<label><input type="radio" name="p35" value="1"> Filtrar un número de puerto específico</label><br>
+<label><input type="radio" name="p35" value="0"> Cambiar protocolo</label><br>
+<label><input type="radio" name="p35" value="0"> Denegar IPs</label><br>
+<label><input type="radio" name="p35" value="0"> Hacer ping</label>
+</div>
+
+<div class="pregunta">
+<p>36. Un nombre NetBIOS estándar contiene:</p>
+<label><input type="radio" name="p36" value="1"> 15 caracteres del dispositivo + 1 del servicio</label><br>
+<label><input type="radio" name="p36" value="0"> 8 bytes fijos</label><br>
+<label><input type="radio" name="p36" value="0"> Solo números hexadecimales</label><br>
+<label><input type="radio" name="p36" value="0"> 32 bits aleatorios</label>
+</div>
+
+<div class="pregunta">
+<p>37. Nivel de riesgo que requiere medidas inmediatas:</p>
+<label><input type="radio" name="p37" value="1"> Alto/Extremo</label><br>
+<label><input type="radio" name="p37" value="0"> Bajo</label><br>
+<label><input type="radio" name="p37" value="0"> Medio</label><br>
+<label><input type="radio" name="p37" value="0"> Negligible</label>
+</div>
+
+<div class="pregunta">
+<p>38. En el Top 10 OWASP 2021, la vulnerabilidad #1 es:</p>
+<label><input type="radio" name="p38" value="1"> Broken Access Control</label><br>
+<label><input type="radio" name="p38" value="0"> XSS</label><br>
+<label><input type="radio" name="p38" value="0"> SSRF</label><br>
+<label><input type="radio" name="p38" value="0"> Inyección</label>
+</div>
+
+<div class="pregunta">
+<p>39. Objetivo principal de la seguridad física:</p>
+<label><input type="radio" name="p39" value="1"> Disminuir riesgos sobre infraestructuras y datos</label><br>
+<label><input type="radio" name="p39" value="0"> Optimizar la impresión</label><br>
+<label><input type="radio" name="p39" value="0"> Permitir libre acceso</label><br>
+<label><input type="radio" name="p39" value="0"> Aumentar el ancho de banda</label>
+</div>
+
+<div class="pregunta">
+<p>40. Ejemplo de control de presencia y acceso:</p>
+<label><input type="radio" name="p40" value="1"> CCTV</label><br>
+<label><input type="radio" name="p40" value="0"> UPS</label><br>
+<label><input type="radio" name="p40" value="0"> Barrera antivirus</label><br>
+<label><input type="radio" name="p40" value="0"> Extintor</label>
+</div>
+
+<div class="pregunta">
+<p>41. Fin de un ataque de escalada de privilegios:</p>
+<label><input type="radio" name="p41" value="1"> Obtener accesos de mayor nivel</label><br>
+<label><input type="radio" name="p41" value="0"> Subir jitter</label><br>
+<label><input type="radio" name="p41" value="0"> Robar hardware</label><br>
+<label><input type="radio" name="p41" value="0"> Colapsar la red</label>
+</div>
+
+<div class="pregunta">
+<p>42. Un Sombrero gris (Gray Hat) es alguien que:</p>
+<label><input type="radio" name="p42" value="1"> A veces actúa como White Hat y a veces como Black Hat</label><br>
+<label><input type="radio" name="p42" value="0"> Siempre malicioso</label><br>
+<label><input type="radio" name="p42" value="0"> Trabaja para la NSA</label><br>
+<label><input type="radio" name="p42" value="0"> Solo ataca bancos</label>
+</div>
+
+<div class="pregunta">
+<p>43. Relación básica de riesgo:</p>
+<label><input type="radio" name="p43" value="1"> Amenaza × Vulnerabilidad × Impacto</label><br>
+<label><input type="radio" name="p43" value="0"> Vulnerabilidad ÷ Impacto</label><br>
+<label><input type="radio" name="p43" value="0"> Impacto – Probabilidad</label><br>
+<label><input type="radio" name="p43" value="0"> Amenaza + Impacto</label>
+</div>
+
+<div class="pregunta">
+<p>44. Fisherman phishing se apoya principalmente en:</p>
+<label><input type="radio" name="p44" value="1"> Redes sociales</label><br>
+<label><input type="radio" name="p44" value="0"> Correos masivos</label><br>
+<label><input type="radio" name="p44" value="0"> MQTT</label><br>
+<label><input type="radio" name="p44" value="0"> Llamadas VoIP</label>
+</div>
+
+<!-- ================= FIN MÓDULO 2 ================= -->
+
+</form>
+
+<button onclick="calificar()">Enviar respuestas</button>
+
+<p id="resultado"></p>
+
+<br><br>
+<a href="modulo1.html">
+<button>← Volver al Módulo 1</button>
+</a>
+
+</div>
+
+<script>
+function calificar() {
+    let puntaje = 0;
+    const total = 20; // Cantidad de preguntas en este módulo
+
+    const preguntas = document.querySelectorAll(".pregunta");
+    preguntas.forEach((p) => {
+        const seleccionada = p.querySelector("input[type=radio]:checked");
+        const resultado = document.createElement("p");
+
+        if (seleccionada) {
+            if (seleccionada.value === "1") {
+                puntaje++;
+                resultado.className = "correcto";
+                resultado.innerText = "✔ Correcto";
+            } else {
+                resultado.className = "incorrecto";
+                resultado.innerText = "✘ Incorrecto";
+            }
+        } else {
+            resultado.className = "incorrecto";
+            resultado.innerText = "✘ Sin responder";
+        }
+
+        p.appendChild(resultado);
+    });
+
+    document.getElementById("resultado").innerText =
+        "Tu puntaje es " + puntaje + " / " + total;
+}
+</script>
+
+</body>
+</html>

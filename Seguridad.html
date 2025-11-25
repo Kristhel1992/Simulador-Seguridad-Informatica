@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 1 - Simulador Seguridad Informática</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2 { text-align: center; }
+
+.pregunta {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.correcto {
+    color: green;
+    font-weight: bold;
+}
+.incorrecto {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    background: #007bff;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background: #005fcc;
+}
+
+#resultado {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h2>Módulo 1 — Seguridad Informática</h2>
+
+<form id="examenForm">
+
+<!-- ================= PREGUNTAS MÓDULO 1 ================= -->
+
+<div class="pregunta">
+<p>1. La herramienta Metasploit Framework destaca por permitir:</p>
+<label><input type="radio" name="p1" value="0"> Crear certificados SSL</label><br>
+<label><input type="radio" name="p1" value="1"> Levantar un servidor SMB falso y capturar hashes</label><br>
+<label><input type="radio" name="p1" value="0"> Generar hashes MD5</label><br>
+<label><input type="radio" name="p1" value="0"> Cifrar discos</label>
+</div>
+
+<div class="pregunta">
+<p>2. El estándar OWASP ASVS se utiliza para:</p>
+<label><input type="radio" name="p2" value="1"> Verificar controles de seguridad en aplicaciones</label><br>
+<label><input type="radio" name="p2" value="0"> Generar certificados SSL</label><br>
+<label><input type="radio" name="p2" value="0"> Cifrado TLS</label><br>
+<label><input type="radio" name="p2" value="0"> Probar hardware</label>
+</div>
+
+<div class="pregunta">
+<p>3. El método de autenticación más común y sencillo es el uso de:</p>
+<label><input type="radio" name="p3" value="1"> Contraseñas</label><br>
+<label><input type="radio" name="p3" value="0"> Tokens biométricos</label><br>
+<label><input type="radio" name="p3" value="0"> NFC implantado</label><br>
+<label><input type="radio" name="p3" value="0"> Blockchain</label>
+</div>
+
+<div class="pregunta">
+<p>4. ¿Para qué se usa Maltego en OSINT?</p>
+<label><input type="radio" name="p4" value="1"> Mapear relaciones entre entidades</label><br>
+<label><input type="radio" name="p4" value="0"> Gestionar contraseñas</label><br>
+<label><input type="radio" name="p4" value="0"> Actualizar firmware</label><br>
+<label><input type="radio" name="p4" value="0"> Probar puertos UDP</label>
+</div>
+
+<div class="pregunta">
+<p>5. En la autenticación de dos factores (2FA), un segundo factor puede ser:</p>
+<label><input type="radio" name="p5" value="1"> Token de un solo uso (OTP)</label><br>
+<label><input type="radio" name="p5" value="0"> Dirección MAC</label><br>
+<label><input type="radio" name="p5" value="0"> Dominio DNS</label><br>
+<label><input type="radio" name="p5" value="0"> Subnet mask</label>
+</div>
+
+<div class="pregunta">
+<p>6. Una falla criptográfica puede conducir principalmente a:</p>
+<label><input type="radio" name="p6" value="1"> Exposición de datos confidenciales</label><br>
+<label><input type="radio" name="p6" value="0"> Aumento de latencia</label><br>
+<label><input type="radio" name="p6" value="0"> DoS</label><br>
+<label><input type="radio" name="p6" value="0"> Jitter elevando</label>
+</div>
+
+<div class="pregunta">
+<p>7. Un hacker ético (White Hat) se caracteriza por:</p>
+<label><input type="radio" name="p7" value="1"> Contar con permiso para probar sistemas</label><br>
+<label><input type="radio" name="p7" value="0"> Distribuir ransomware</label><br>
+<label><input type="radio" name="p7" value="0"> Espiar empresas</label><br>
+<label><input type="radio" name="p7" value="0"> Obtener lucro personal</label>
+</div>
+
+<div class="pregunta">
+<p>8. Ejemplo de ataque activo:</p>
+<label><input type="radio" name="p8" value="1"> Inyección SQL</label><br>
+<label><input type="radio" name="p8" value="0"> Footprinting</label><br>
+<label><input type="radio" name="p8" value="0"> Sniffing</label><br>
+<label><input type="radio" name="p8" value="0"> Shoulder surfing</label>
+</div>
+
+<div class="pregunta">
+<p>9. El principio “C” del trípode CIA significa:</p>
+<label><input type="radio" name="p9" value="1"> Confidencialidad</label><br>
+<label><input type="radio" name="p9" value="0"> Capacidad</label><br>
+<label><input type="radio" name="p9" value="0"> Conectividad</label><br>
+<label><input type="radio" name="p9" value="0"> Continuidad</label>
+</div>
+
+<div class="pregunta">
+<p>10. Wifiphisher es una herramienta usada para:</p>
+<label><input type="radio" name="p10" value="1"> Obtener contraseñas WPA/WPA2 vía phishing</label><br>
+<label><input type="radio" name="p10" value="0"> Enumerar DNS</label><br>
+<label><input type="radio" name="p10" value="0"> Escanear puertos</label><br>
+<label><input type="radio" name="p10" value="0"> Realizar fuzzing</label>
+</div>
+
+<div class="pregunta">
+<p>11. El método de transposición se basa en:</p>
+<label><input type="radio" name="p11" value="1"> Reordenar las letras del mensaje</label><br>
+<label><input type="radio" name="p11" value="0"> Usar claves públicas</label><br>
+<label><input type="radio" name="p11" value="0"> Sustituir letras por números</label><br>
+<label><input type="radio" name="p11" value="0"> Generar firmas digitales</label>
+</div>
+
+<div class="pregunta">
+<p>12. La criptografía de clave pública también se llama:</p>
+<label><input type="radio" name="p12" value="1"> Asimétrica</label><br>
+<label><input type="radio" name="p12" value="0"> Simétrica</label><br>
+<label><input type="radio" name="p12" value="0"> Secreta</label><br>
+<label><input type="radio" name="p12" value="0"> Esteganografía</label>
+</div>
+
+<div class="pregunta">
+<p>13. Los protocolos de autenticación tipo desafío-respuesta sirven para:</p>
+<label><input type="radio" name="p13" value="1"> Verificar la identidad sin revelar el secreto</label><br>
+<label><input type="radio" name="p13" value="0"> Generar OTP</label><br>
+<label><input type="radio" name="p13" value="0"> Medir jitter</label><br>
+<label><input type="radio" name="p13" value="0"> Cifrar discos</label>
+</div>
+
+<div class="pregunta">
+<p>14. Ventaja esencial de la criptografía de clave pública:</p>
+<label><input type="radio" name="p14" value="1"> No es necesario compartir la clave secreta</label><br>
+<label><input type="radio" name="p14" value="0"> No usa matemáticas</label><br>
+<label><input type="radio" name="p14" value="0"> Requiere OTP</label><br>
+<label><input type="radio" name="p14" value="0"> Consume menos CPU</label>
+</div>
+
+<div class="pregunta">
+<p>15. En un cifrador en bloque la operación que invierte la inicial se llama:</p>
+<label><input type="radio" name="p15" value="1"> Transformación final</label><br>
+<label><input type="radio" name="p15" value="0"> OTP</label><br>
+<label><input type="radio" name="p15" value="0"> VRFY</label><br>
+<label><input type="radio" name="p15" value="0"> Hash</label>
+</div>
+
+<div class="pregunta">
+<p>16. Primer paso de un ataque de ingeniería social:</p>
+<label><input type="radio" name="p16" value="1"> Recopilar información de la víctima</label><br>
+<label><input type="radio" name="p16" value="0"> Borrar huellas</label><br>
+<label><input type="radio" name="p16" value="0"> Infectar con ransomware</label><br>
+<label><input type="radio" name="p16" value="0"> Solicitar rescate</label>
+</div>
+
+<div class="pregunta">
+<p>17. En SMTP, el comando que verifica un usuario es:</p>
+<label><input type="radio" name="p17" value="1"> VRFY</label><br>
+<label><input type="radio" name="p17" value="0"> RCPT TO</label><br>
+<label><input type="radio" name="p17" value="0"> DATA</label><br>
+<label><input type="radio" name="p17" value="0"> HELO</label>
+</div>
+
+<div class="pregunta">
+<p>18. El término SSRF significa:</p>
+<label><input type="radio" name="p18" value="1"> Server-Side Request Forgery</label><br>
+<label><input type="radio" name="p18" value="0"> Safe Session Reset Form</label><br>
+<label><input type="radio" name="p18" value="0"> Simple Service Relay Feature</label><br>
+<label><input type="radio" name="p18" value="0"> Secure Software Risk Framework</label>
+</div>
+
+<div class="pregunta">
+<p>19. En el nivel de riesgo, “consecuencia” se refiere a:</p>
+<label><input type="radio" name="p19" value="1"> Severidad del daño</label><br>
+<label><input type="radio" name="p19" value="0"> Tiempo de respuesta</label><br>
+<label><input type="radio" name="p19" value="0"> Probabilidad</label><br>
+<label><input type="radio" name="p19" value="0"> Valor del activo</label>
+</div>
+
+<div class="pregunta">
+<p>20. Los activos como servidores y routers corresponden a:</p>
+<label><input type="radio" name="p20" value="1"> Hardware</label><br>
+<label><input type="radio" name="p20" value="0"> Data</label><br>
+<label><input type="radio" name="p20" value="0"> Software</label><br>
+<label><input type="radio" name="p20" value="0"> Lines & Networks</label>
+</div>
+
+<div class="pregunta">
+<p>21. Primera etapa del hacking ético:</p>
+<label><input type="radio" name="p21" value="1"> Reconocimiento (recon)</label><br>
+<label><input type="radio" name="p21" value="0"> Borrado de huellas</label><br>
+<label><input type="radio" name="p21" value="0"> Escalada de privilegios</label><br>
+<label><input type="radio" name="p21" value="0"> Mantenimiento de acceso</label>
+</div>
+
+<div class="pregunta">
+<p>22. La enumeración se emplea para listar:</p>
+<label><input type="radio" name="p22" value="1"> Usuarios, hosts y servicios</label><br>
+<label><input type="radio" name="p22" value="0"> Logs de impresora</label><br>
+<label><input type="radio" name="p22" value="0"> Parches instalados</label><br>
+<label><input type="radio" name="p22" value="0"> Temperatura CPU</label>
+</div>
+
+<div class="pregunta">
+<p>23. En seguridad lógica, el control AAA incluye:</p>
+<label><input type="radio" name="p23" value="1"> Autenticación, autorización y auditoría</label><br>
+<label><input type="radio" name="p23" value="0"> API, App, Audit</label><br>
+<label><input type="radio" name="p23" value="0"> Antispam, antivirus, antimalware</label><br>
+<label><input type="radio" name="p23" value="0"> Asignar ACLs automáticas</label>
+</div>
+
+<div class="pregunta">
+<p>24. Los ataques pasivos se caracterizan por:</p>
+<label><input type="radio" name="p24" value="1"> Escuchar y capturar tráfico</label><br>
+<label><input type="radio" name="p24" value="0"> Destruir hardware</label><br>
+<label><input type="radio" name="p24" value="0"> Ejecutar DoS</label><br>
+<label><input type="radio" name="p24" value="0"> Inyectar malware</label>
+</div>
+
+<!-- ================= FIN MÓDULO 1 ================= -->
+
+</form>
+
+<button onclick="calificar()">Enviar respuestas</button>
+
+<p id="resultado"></p>
+
+<br><br>
+<a href="modulo2.html">
+<button>Ir al Módulo 2 →</button>
+</a>
+
+</div>
+
+<script>
+function calificar() {
+    let puntaje = 0;
+    const total = 24;
+
+    const preguntas = document.querySelectorAll(".pregunta");
+    preguntas.forEach((p, i) => {
+        const seleccionada = p.querySelector("input[type=radio]:checked");
+        const resultado = document.createElement("p");
+
+        if (seleccionada) {
+            if (seleccionada.value === "1") {
+                puntaje++;
+                resultado.className = "correcto";
+                resultado.innerText = "✔ Correcto";
+            } else {
+                resultado.className = "incorrecto";
+                resultado.innerText = "✘ Incorrecto";
+            }
+        } else {
+            resultado.className = "incorrecto";
+            resultado.innerText = "✘ Sin responder";
+        }
+
+        p.appendChild(resultado);
+    });
+
+    document.getElementById("resultado").innerText =
+        "Tu puntaje es " + puntaje + " / " + total;
+}
+</script>
+
+</body>
+</html>
