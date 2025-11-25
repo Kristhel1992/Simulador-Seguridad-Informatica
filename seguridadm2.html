@@ -252,10 +252,9 @@ function calificar() {
     preguntas.forEach((p) => {
         const seleccionada = p.querySelector("input[type=radio]:checked");
         const resultado = document.createElement("p");
-
         if (seleccionada) {
             if (seleccionada.value === "1") {
-                puntaje++;
+                puntaje
                 resultado.className = "correcto";
                 resultado.innerText = "✔ Correcto";
             } else {
